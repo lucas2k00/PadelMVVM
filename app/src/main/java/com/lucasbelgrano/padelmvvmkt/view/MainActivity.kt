@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         golpesViewModel.golpesModel.observe(this, Observer { currentGolpe ->
-            //Actualiza livedata
+            //Actualiza livedata, test git
             binding.tvName.text = currentGolpe.name
             binding.tvDescription.text = currentGolpe.description
         })
