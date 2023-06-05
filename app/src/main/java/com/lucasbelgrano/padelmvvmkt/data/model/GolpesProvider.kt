@@ -1,11 +1,13 @@
-package com.lucasbelgrano.padelmvvmkt.model
+package com.lucasbelgrano.padelmvvmkt.data.model
 
 class GolpesProvider {
     companion object {
-
-        fun random(): GolpesModel {
-            val i = (0..8).random()
-            return golpes[i]
+        private var currentIndex = 0;
+        fun next(): GolpesModel {
+            if (currentIndex == golpes.size){
+                return golpes[currentIndex]
+            }
+            return golpes[currentIndex++]
         }
 
         private val golpes = listOf(

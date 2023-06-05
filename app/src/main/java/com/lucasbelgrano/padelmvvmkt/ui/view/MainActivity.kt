@@ -1,11 +1,11 @@
-package com.lucasbelgrano.padelmvvmkt.view
+package com.lucasbelgrano.padelmvvmkt.ui.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import com.lucasbelgrano.padelmvvmkt.databinding.ActivityMainBinding
-import com.lucasbelgrano.padelmvvmkt.viewmodel.GolpesViewModel
+import com.lucasbelgrano.padelmvvmkt.ui.viewmodel.GolpesViewModel
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -16,11 +16,12 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //Logica al seguir en caso de actualizar liveData
         golpesViewModel.golpesModel.observe(this, Observer { currentGolpe ->
             //Actualiza livedata, test git
             binding.tvName.text = currentGolpe.name
             binding.tvDescription.text = currentGolpe.description
         })
-        binding.viewContainer.setOnClickListener { golpesViewModel.randomGolpe() }
+        binding.viewContainer.setOnClickListener { golpesViewModel.nextGolpe() }
     }
 }
