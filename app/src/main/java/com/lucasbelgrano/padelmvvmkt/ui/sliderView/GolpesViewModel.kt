@@ -1,9 +1,9 @@
-package com.lucasbelgrano.padelmvvmkt.ui.viewmodel
+package com.lucasbelgrano.padelmvvmkt.ui.sliderView
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.lucasbelgrano.padelmvvmkt.data.model.GolpesModel
-import com.lucasbelgrano.padelmvvmkt.data.model.GolpesProvider
+import com.lucasbelgrano.padelmvvmkt.data.model.golpes.GolpesModel
+import com.lucasbelgrano.padelmvvmkt.data.model.golpes.GolpesProvider
 
 class GolpesViewModel : ViewModel() {
 

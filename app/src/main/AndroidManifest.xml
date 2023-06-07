@@ -13,7 +13,10 @@
         android:theme="@style/Theme.PadelMVVMKt"
         tools:targetApi="31">
         <activity
-            android:name=".ui.view.MainActivity"
+            android:name=".ui.loginView.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.sliderView.SliderGolpesActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

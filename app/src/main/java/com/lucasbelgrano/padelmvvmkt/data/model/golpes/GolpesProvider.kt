@@ -1,10 +1,11 @@
-package com.lucasbelgrano.padelmvvmkt.data.model
+package com.lucasbelgrano.padelmvvmkt.data.model.golpes
 
 class GolpesProvider {
     companion object {
         private var currentIndex = 0;
         fun next(): GolpesModel {
             if (currentIndex == golpes.size){
+                currentIndex = 0
                 return golpes[currentIndex]
             }
             return golpes[currentIndex++]

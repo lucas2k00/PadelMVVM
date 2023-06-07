@@ -1,6 +1,0 @@
-Iniciar git en caso de que no este inicializado
-git status
-git init
-
-git push *
-git commit -m "msg"
