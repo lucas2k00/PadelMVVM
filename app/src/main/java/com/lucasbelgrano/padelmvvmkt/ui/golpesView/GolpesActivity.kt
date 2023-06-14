@@ -1,4 +1,4 @@
-package com.lucasbelgrano.padelmvvmkt.ui.sliderView
+package com.lucasbelgrano.padelmvvmkt.ui.golpesView
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,7 +6,7 @@ import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import com.lucasbelgrano.padelmvvmkt.databinding.ActivityMainBinding
 
-class SliderGolpesActivity : AppCompatActivity() {
+class GolpesActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private val golpesViewModel: GolpesViewModel by viewModels()
 

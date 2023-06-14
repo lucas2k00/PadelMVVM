@@ -16,7 +16,7 @@
             android:name=".ui.loginView.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.sliderView.SliderGolpesActivity"
+            android:name=".ui.golpesView.GolpesActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

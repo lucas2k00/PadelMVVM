@@ -1,4 +1,4 @@
-package com.lucasbelgrano.padelmvvmkt.ui.sliderView
+package com.lucasbelgrano.padelmvvmkt.ui.golpesView
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
