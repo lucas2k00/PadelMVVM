@@ -28,7 +28,7 @@ class LoginActivity : AppCompatActivity() {
                 )) {
                     Toast.makeText(this, "Usuario valido", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, MainActivity::class.java)
-                    intent.putExtra("nameUser", binding.editTextUsername.text.toString())
+                    intent.putExtra("username", binding.editTextUsername.text.toString())
                     startActivity(intent)
                 } else {
                     Toast.makeText(this, "Usuario o contraseña incorrecta", Toast.LENGTH_LONG).show()
@@ -48,7 +48,7 @@ class LoginActivity : AppCompatActivity() {
                     )) {
                     Toast.makeText(this, "Usuario creado", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, MainActivity::class.java)
-                    intent.putExtra("nameUser", binding.editTextUsername.text.toString())
+                    intent.putExtra("username", binding.editTextUsername.text.toString())
                     startActivity(intent)
                 } else {
                     Toast.makeText(this, "Nombre de usuario ya existe", Toast.LENGTH_LONG).show()
