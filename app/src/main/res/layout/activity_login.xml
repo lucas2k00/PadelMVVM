@@ -6,6 +6,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="16dp"
+    android:background="@color/background"
     tools:context=".ui.loginView.LoginActivity">
 
     <View
@@ -16,12 +17,14 @@
         android:id="@+id/editTextUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         android:hint="Username" />
 
     <EditText
         android:id="@+id/editTextPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         android:inputType="textPassword"
         android:hint="Password" />
     <View

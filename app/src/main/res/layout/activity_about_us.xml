@@ -1,9 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".ui.aboutUsView.AboutUsActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        android:lineSpacingExtra="12dp"
+        android:text="Somos un nuevo club de pádel ubicado en Alcalá de Henares. Nos apasiona el pádel y nos esforzamos por ofrecer una experiencia excepcional. Nuestro objetivo es crear un ambiente acogedor para jugadores de todos los niveles. Contamos con instalaciones modernas y profesionales capacitados. Únete a nuestra comunidad y disfruta del pádel en un ambiente amigable y emocionante en Alcalá de Henares" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btnMaps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ver en Google Maps" />
+</LinearLayout>
