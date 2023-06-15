@@ -45,7 +45,7 @@ class ClubDatabaseSQLiteOpenHelper(context: Context) : SQLiteOpenHelper(
 
     fun comprobarCredenciales(name: String, password: String): Boolean {
         val db = this.readableDatabase
-        val cursor = db.rawQuery("SELECT * FROM users WHERE $name = ? AND $password = ?", arrayOf(name, password))
+        val cursor = db.rawQuery("SELECT * FROM users WHERE name = ? AND password = ?", arrayOf(name, password))
         val res = cursor.count > 0
         cursor.close()
         db.close()

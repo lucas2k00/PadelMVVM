@@ -1,10 +1,12 @@
 package com.lucasbelgrano.padelmvvmkt.ui.loginView
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.lucasbelgrano.padelmvvmkt.data.database.ClubDatabaseSQLiteOpenHelper
 import com.lucasbelgrano.padelmvvmkt.databinding.ActivityLoginBinding
+import com.lucasbelgrano.padelmvvmkt.ui.menuView.MainActivity
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
@@ -24,13 +26,15 @@ class LoginActivity : AppCompatActivity() {
                     binding.editTextUsername.text.toString(),
                     binding.editTextPassword.text.toString()
                 )) {
-                    Toast.makeText(this, "Usuario valido", Toast.LENGTH_SHORT)
-                    //Cambiar vista
+                    Toast.makeText(this, "Usuario valido", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, MainActivity::class.java)
+                    intent.putExtra("nameUser", binding.editTextUsername.text.toString())
+                    startActivity(intent)
                 } else {
-                    Toast.makeText(this, "Usuario o contraseña incorrecta", Toast.LENGTH_SHORT)
+                    Toast.makeText(this, "Usuario o contraseña incorrecta", Toast.LENGTH_LONG).show()
                 }
             } else {
-                Toast.makeText(this, "Rellena el formulario", Toast.LENGTH_SHORT)
+                Toast.makeText(this, "Rellena el formulario", Toast.LENGTH_LONG).show()
             }
         }
 
@@ -42,13 +46,15 @@ class LoginActivity : AppCompatActivity() {
                         binding.editTextUsername.text.toString(),
                         binding.editTextPassword.text.toString()
                     )) {
-                    Toast.makeText(this, "Usuario creado", Toast.LENGTH_SHORT)
-                    //Cambiar vista
+                    Toast.makeText(this, "Usuario creado", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, MainActivity::class.java)
+                    intent.putExtra("nameUser", binding.editTextUsername.text.toString())
+                    startActivity(intent)
                 } else {
-                    Toast.makeText(this, "Nombre de usuario ya existe", Toast.LENGTH_SHORT)
+                    Toast.makeText(this, "Nombre de usuario ya existe", Toast.LENGTH_LONG).show()
                 }
             } else {
-                Toast.makeText(this, "Rellena el formulario", Toast.LENGTH_SHORT)
+                Toast.makeText(this, "Rellena el formulario", Toast.LENGTH_LONG).show()
             }
         }
     }
