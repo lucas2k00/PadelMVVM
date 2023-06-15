@@ -17,8 +17,13 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val parametro = intent.getStringExtra("nameUser")
-        binding.txtSaludo.text = binding.txtSaludo.text.toString() + intent.getStringExtra("nameUser")
+        binding.txtSaludo.text =
+            binding.txtSaludo.text.toString() + intent.getStringExtra("nameUser")
+        if (intent.getStringExtra("reserva") != null) {
+            binding.txtReserva.text = intent.getStringExtra("reserva")
+        } else{
+            binding.txtReserva.text = "No tienes ninguna pista reservada"
+        }
         binding.btnAboutUs.setOnClickListener {
             startActivity(Intent(this, AboutUsActivity::class.java))
         }
