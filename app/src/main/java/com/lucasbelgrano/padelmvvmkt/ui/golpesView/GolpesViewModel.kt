@@ -6,9 +6,7 @@ import com.lucasbelgrano.padelmvvmkt.data.model.golpes.GolpesModel
 import com.lucasbelgrano.padelmvvmkt.data.model.golpes.GolpesProvider
 
 class GolpesViewModel : ViewModel() {
-
     val golpesModel = MutableLiveData<GolpesModel>()
-
     fun nextGolpe() {
         golpesModel.postValue(GolpesProvider.next())
     }

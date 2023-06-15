@@ -1,7 +1,7 @@
 package com.lucasbelgrano.padelmvvmkt.data.model.user
-
+//to delete class
 class UserProvider {
-    private val users = arrayListOf<UserModel>(UserModel("user", "user"))
+    /*private val users = arrayListOf<UserModel>(UserModel("user", "user"))
     fun addUser(u: UserModel) {
         users.add(u)
     }
@@ -12,5 +12,5 @@ class UserProvider {
             }
         }
         return false
-    }
+    }*/
 }

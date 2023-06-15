@@ -1,3 +1,3 @@
 package com.lucasbelgrano.padelmvvmkt.data.model.user
 
-data class UserModel (val user: String, val password: String)
+data class UserModel (val name: String, val password: String)
